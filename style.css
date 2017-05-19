@@ -18,6 +18,97 @@
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
  */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* mixin to calculate rem w/px fallback */
+/* usage: +fontSize(16px) */
+/* mixin for transitions */
+/* mixin for opacity with browser fallback */
+/* usage: */
+/* line 46, sass/_global.sass */
+.faded-text {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
 /*--------------------------------------------------------------
  * >>> TABLE OF CONTENTS:
  * ----------------------------------------------------------------
@@ -43,19 +134,19 @@
 /*--------------------------------------------------------------
  * # Normalize
  * -------------------------------------------------------------- */
-/* line 49, sass/style.sass */
+/* line 51, sass/style.sass */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/* line 55, sass/style.sass */
+/* line 57, sass/style.sass */
 body {
   margin: 0;
 }
 
-/* line 59, sass/style.sass */
+/* line 61, sass/style.sass */
 article,
 aside,
 details,
@@ -71,7 +162,7 @@ summary {
   display: block;
 }
 
-/* line 74, sass/style.sass */
+/* line 76, sass/style.sass */
 audio,
 canvas,
 progress,
@@ -80,63 +171,63 @@ video {
   vertical-align: baseline;
 }
 
-/* line 82, sass/style.sass */
+/* line 84, sass/style.sass */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 87, sass/style.sass */
+/* line 89, sass/style.sass */
 [hidden],
 template {
   display: none;
 }
 
-/* line 92, sass/style.sass */
+/* line 94, sass/style.sass */
 a {
   background-color: transparent;
 }
 
-/* line 96, sass/style.sass */
+/* line 98, sass/style.sass */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 101, sass/style.sass */
+/* line 103, sass/style.sass */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 105, sass/style.sass */
+/* line 107, sass/style.sass */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 110, sass/style.sass */
+/* line 112, sass/style.sass */
 dfn {
   font-style: italic;
 }
 
-/* line 114, sass/style.sass */
+/* line 116, sass/style.sass */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 119, sass/style.sass */
+/* line 121, sass/style.sass */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 124, sass/style.sass */
+/* line 126, sass/style.sass */
 small {
   font-size: 80%;
 }
 
-/* line 128, sass/style.sass */
+/* line 130, sass/style.sass */
 sub,
 sup {
   font-size: 75%;
@@ -145,43 +236,43 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 136, sass/style.sass */
+/* line 138, sass/style.sass */
 sup {
   top: -0.5em;
 }
 
-/* line 140, sass/style.sass */
+/* line 142, sass/style.sass */
 sub {
   bottom: -0.25em;
 }
 
-/* line 144, sass/style.sass */
+/* line 146, sass/style.sass */
 img {
   border: 0;
 }
 
-/* line 148, sass/style.sass */
+/* line 150, sass/style.sass */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 152, sass/style.sass */
+/* line 154, sass/style.sass */
 figure {
   margin: 1em 40px;
 }
 
-/* line 156, sass/style.sass */
+/* line 158, sass/style.sass */
 hr {
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 161, sass/style.sass */
+/* line 163, sass/style.sass */
 pre {
   overflow: auto;
 }
 
-/* line 165, sass/style.sass */
+/* line 167, sass/style.sass */
 code,
 kbd,
 pre,
@@ -190,7 +281,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 173, sass/style.sass */
+/* line 175, sass/style.sass */
 button,
 input,
 optgroup,
@@ -201,18 +292,18 @@ textarea {
   margin: 0;
 }
 
-/* line 183, sass/style.sass */
+/* line 185, sass/style.sass */
 button {
   overflow: visible;
 }
 
-/* line 187, sass/style.sass */
+/* line 189, sass/style.sass */
 button,
 select {
   text-transform: none;
 }
 
-/* line 192, sass/style.sass */
+/* line 194, sass/style.sass */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -221,73 +312,73 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 200, sass/style.sass */
+/* line 202, sass/style.sass */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 205, sass/style.sass */
+/* line 207, sass/style.sass */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 211, sass/style.sass */
+/* line 213, sass/style.sass */
 input {
   line-height: normal;
 }
 
-/* line 215, sass/style.sass */
+/* line 217, sass/style.sass */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 221, sass/style.sass */
+/* line 223, sass/style.sass */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 226, sass/style.sass */
+/* line 228, sass/style.sass */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 231, sass/style.sass */
+/* line 233, sass/style.sass */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 237, sass/style.sass */
+/* line 239, sass/style.sass */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 242, sass/style.sass */
+/* line 244, sass/style.sass */
 textarea {
   overflow: auto;
 }
 
-/* line 246, sass/style.sass */
+/* line 248, sass/style.sass */
 optgroup {
   font-weight: bold;
 }
 
-/* line 250, sass/style.sass */
+/* line 252, sass/style.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 255, sass/style.sass */
+/* line 257, sass/style.sass */
 td,
 th {
   padding: 0;
@@ -296,7 +387,7 @@ th {
 /*--------------------------------------------------------------
  * # Typography
  * -------------------------------------------------------------- */
-/* line 263, sass/style.sass */
+/* line 265, sass/style.sass */
 body,
 button,
 input,
@@ -309,7 +400,7 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 275, sass/style.sass */
+/* line 277, sass/style.sass */
 h1,
 h2,
 h3,
@@ -319,12 +410,12 @@ h6 {
   clear: both;
 }
 
-/* line 284, sass/style.sass */
+/* line 286, sass/style.sass */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 288, sass/style.sass */
+/* line 290, sass/style.sass */
 dfn,
 cite,
 em,
@@ -332,17 +423,17 @@ i {
   font-style: italic;
 }
 
-/* line 295, sass/style.sass */
+/* line 297, sass/style.sass */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 299, sass/style.sass */
+/* line 301, sass/style.sass */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 303, sass/style.sass */
+/* line 305, sass/style.sass */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -355,7 +446,7 @@ pre {
   padding: 1.6em;
 }
 
-/* line 315, sass/style.sass */
+/* line 317, sass/style.sass */
 code,
 kbd,
 tt,
@@ -365,21 +456,21 @@ var {
   font-size: 0.9375rem;
 }
 
-/* line 324, sass/style.sass */
+/* line 326, sass/style.sass */
 abbr,
 acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 330, sass/style.sass */
+/* line 332, sass/style.sass */
 mark,
 ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 336, sass/style.sass */
+/* line 338, sass/style.sass */
 big {
   font-size: 125%;
 }
@@ -387,24 +478,24 @@ big {
 /*--------------------------------------------------------------
  * # Elements
  * -------------------------------------------------------------- */
-/* line 343, sass/style.sass */
+/* line 345, sass/style.sass */
 html {
   box-sizing: border-box;
 }
 
-/* line 347, sass/style.sass */
+/* line 349, sass/style.sass */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 353, sass/style.sass */
+/* line 355, sass/style.sass */
 body {
   background: #fff;
 }
 
-/* line 357, sass/style.sass */
+/* line 359, sass/style.sass */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -412,13 +503,13 @@ q:after {
   content: "";
 }
 
-/* line 364, sass/style.sass */
+/* line 366, sass/style.sass */
 blockquote,
 q {
   quotes: "" "";
 }
 
-/* line 369, sass/style.sass */
+/* line 371, sass/style.sass */
 hr {
   background-color: #ccc;
   border: 0;
@@ -426,40 +517,40 @@ hr {
   margin-bottom: 1.5em;
 }
 
-/* line 376, sass/style.sass */
+/* line 378, sass/style.sass */
 ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
 
-/* line 381, sass/style.sass */
+/* line 383, sass/style.sass */
 ul {
   list-style: disc;
 }
 
-/* line 385, sass/style.sass */
+/* line 387, sass/style.sass */
 ol {
   list-style: decimal;
 }
 
-/* line 389, sass/style.sass */
+/* line 391, sass/style.sass */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 395, sass/style.sass */
+/* line 397, sass/style.sass */
 dt {
   font-weight: bold;
 }
 
-/* line 399, sass/style.sass */
+/* line 401, sass/style.sass */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-/* line 403, sass/style.sass */
+/* line 405, sass/style.sass */
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -467,13 +558,13 @@ img {
   /* Adhere to container width. */
 }
 
-/* line 410, sass/style.sass */
+/* line 412, sass/style.sass */
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags dont overflow the content area. */
 }
 
-/* line 415, sass/style.sass */
+/* line 417, sass/style.sass */
 table {
   margin: 0 0 1.5em;
   width: 100%;
@@ -482,7 +573,7 @@ table {
 /*--------------------------------------------------------------
  * # Forms
  * -------------------------------------------------------------- */
-/* line 423, sass/style.sass */
+/* line 425, sass/style.sass */
 button,
 input[type="button"],
 input[type="reset"],
@@ -498,7 +589,7 @@ input[type="submit"] {
   padding: 0.6em 1em 0.4em;
 }
 
-/* line 438, sass/style.sass */
+/* line 440, sass/style.sass */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -506,7 +597,7 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
-/* line 445, sass/style.sass */
+/* line 447, sass/style.sass */
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -518,7 +609,7 @@ input[type="submit"]:active {
   border-color: #aaa #bbb #bbb;
 }
 
-/* line 456, sass/style.sass */
+/* line 458, sass/style.sass */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -541,12 +632,12 @@ textarea {
   padding: 3px;
 }
 
-/* line 478, sass/style.sass */
+/* line 480, sass/style.sass */
 select {
   border: 1px solid #ccc;
 }
 
-/* line 482, sass/style.sass */
+/* line 484, sass/style.sass */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -566,7 +657,7 @@ textarea:focus {
   color: #111;
 }
 
-/* line 501, sass/style.sass */
+/* line 503, sass/style.sass */
 textarea {
   width: 100%;
 }
@@ -577,29 +668,29 @@ textarea {
 /*--------------------------------------------------------------
  * ## Links
  * -------------------------------------------------------------- */
-/* line 511, sass/style.sass */
+/* line 513, sass/style.sass */
 a {
   color: royalblue;
 }
 
-/* line 515, sass/style.sass */
+/* line 517, sass/style.sass */
 a:visited {
   color: purple;
 }
 
-/* line 519, sass/style.sass */
+/* line 521, sass/style.sass */
 a:hover,
 a:focus,
 a:active {
   color: midnightblue;
 }
 
-/* line 525, sass/style.sass */
+/* line 527, sass/style.sass */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 529, sass/style.sass */
+/* line 531, sass/style.sass */
 a:hover,
 a:active {
   outline: 0;
@@ -608,7 +699,7 @@ a:active {
 /*--------------------------------------------------------------
  * ## Menus
  * -------------------------------------------------------------- */
-/* line 537, sass/style.sass */
+/* line 539, sass/style.sass */
 .main-navigation {
   clear: both;
   display: block;
@@ -616,7 +707,7 @@ a:active {
   width: 100%;
 }
 
-/* line 544, sass/style.sass */
+/* line 546, sass/style.sass */
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -624,19 +715,19 @@ a:active {
   padding-left: 0;
 }
 
-/* line 551, sass/style.sass */
+/* line 553, sass/style.sass */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 556, sass/style.sass */
+/* line 558, sass/style.sass */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
-/* line 561, sass/style.sass */
+/* line 563, sass/style.sass */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -646,48 +737,48 @@ a:active {
   z-index: 99999;
 }
 
-/* line 570, sass/style.sass */
+/* line 572, sass/style.sass */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 575, sass/style.sass */
+/* line 577, sass/style.sass */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 595, sass/style.sass */
+/* line 597, sass/style.sass */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 
-/* line 600, sass/style.sass */
+/* line 602, sass/style.sass */
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 
 /* Small menu. */
-/* line 612, sass/style.sass */
+/* line 614, sass/style.sass */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 618, sass/style.sass */
+  /* line 620, sass/style.sass */
   .menu-toggle {
     display: none;
   }
 
-  /* line 621, sass/style.sass */
+  /* line 623, sass/style.sass */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 626, sass/style.sass */
+/* line 628, sass/style.sass */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -695,7 +786,7 @@ a:active {
   overflow: hidden;
 }
 
-/* line 633, sass/style.sass */
+/* line 635, sass/style.sass */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -703,7 +794,7 @@ a:active {
   width: 50%;
 }
 
-/* line 640, sass/style.sass */
+/* line 642, sass/style.sass */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -716,7 +807,7 @@ a:active {
  * # Accessibility
  * -------------------------------------------------------------- */
 /* Text meant only for screen readers. */
-/* line 652, sass/style.sass */
+/* line 654, sass/style.sass */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -726,7 +817,7 @@ a:active {
   word-wrap: normal !important;
 }
 
-/* line 661, sass/style.sass */
+/* line 663, sass/style.sass */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -748,7 +839,7 @@ a:active {
 }
 
 /* Do not show the outline on the skip link target. */
-/* line 682, sass/style.sass */
+/* line 684, sass/style.sass */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -756,21 +847,21 @@ a:active {
 /*--------------------------------------------------------------
  * # Alignments
  * -------------------------------------------------------------- */
-/* line 689, sass/style.sass */
+/* line 691, sass/style.sass */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 695, sass/style.sass */
+/* line 697, sass/style.sass */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-/* line 701, sass/style.sass */
+/* line 703, sass/style.sass */
 .aligncenter {
   clear: both;
   display: block;
@@ -781,7 +872,7 @@ a:active {
 /*--------------------------------------------------------------
  * # Clearings
  * -------------------------------------------------------------- */
-/* line 711, sass/style.sass */
+/* line 713, sass/style.sass */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -799,7 +890,7 @@ a:active {
   table-layout: fixed;
 }
 
-/* line 728, sass/style.sass */
+/* line 730, sass/style.sass */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -812,13 +903,13 @@ a:active {
 /*--------------------------------------------------------------
  * # Widgets
  * -------------------------------------------------------------- */
-/* line 740, sass/style.sass */
+/* line 742, sass/style.sass */
 .widget {
   margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
-/* line 745, sass/style.sass */
+/* line 747, sass/style.sass */
 .widget select {
   max-width: 100%;
 }
@@ -829,36 +920,36 @@ a:active {
 /*--------------------------------------------------------------
  * ## Posts and pages
  * -------------------------------------------------------------- */
-/* line 755, sass/style.sass */
+/* line 757, sass/style.sass */
 .sticky {
   display: block;
 }
 
-/* line 759, sass/style.sass */
+/* line 761, sass/style.sass */
 .hentry {
   margin: 0 0 1.5em;
 }
 
-/* line 763, sass/style.sass */
+/* line 765, sass/style.sass */
 .byline,
 .updated:not(.published) {
   display: none;
 }
 
-/* line 768, sass/style.sass */
+/* line 770, sass/style.sass */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 773, sass/style.sass */
+/* line 775, sass/style.sass */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 779, sass/style.sass */
+/* line 781, sass/style.sass */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -867,12 +958,12 @@ a:active {
 /*--------------------------------------------------------------
  * ## Comments
  * -------------------------------------------------------------- */
-/* line 787, sass/style.sass */
+/* line 789, sass/style.sass */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 791, sass/style.sass */
+/* line 793, sass/style.sass */
 .bypostauthor {
   display: block;
 }
@@ -881,13 +972,13 @@ a:active {
  * # Infinite scroll
  * -------------------------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 800, sass/style.sass */
+/* line 802, sass/style.sass */
 .infinite-scroll.neverending .site-footer {
   display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-/* line 805, sass/style.sass */
+/* line 807, sass/style.sass */
 .infinity-end.neverending .site-footer {
   display: block;
 }
@@ -895,7 +986,7 @@ a:active {
 /*--------------------------------------------------------------
  * # Media
  * -------------------------------------------------------------- */
-/* line 812, sass/style.sass */
+/* line 814, sass/style.sass */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -906,7 +997,7 @@ a:active {
 }
 
 /* Make sure embeds and iframes fit their containers. */
-/* line 822, sass/style.sass */
+/* line 824, sass/style.sass */
 embed,
 iframe,
 object {
@@ -916,25 +1007,25 @@ object {
 /*--------------------------------------------------------------
  * ## Captions
  * -------------------------------------------------------------- */
-/* line 831, sass/style.sass */
+/* line 833, sass/style.sass */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 
-/* line 836, sass/style.sass */
+/* line 838, sass/style.sass */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 842, sass/style.sass */
+/* line 844, sass/style.sass */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 846, sass/style.sass */
+/* line 848, sass/style.sass */
 .wp-caption-text {
   text-align: center;
 }
@@ -942,12 +1033,12 @@ object {
 /*--------------------------------------------------------------
  * ## Galleries
  * -------------------------------------------------------------- */
-/* line 853, sass/style.sass */
+/* line 855, sass/style.sass */
 .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 857, sass/style.sass */
+/* line 859, sass/style.sass */
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -955,47 +1046,47 @@ object {
   width: 100%;
 }
 
-/* line 864, sass/style.sass */
+/* line 866, sass/style.sass */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-/* line 868, sass/style.sass */
+/* line 870, sass/style.sass */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
 
-/* line 872, sass/style.sass */
+/* line 874, sass/style.sass */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-/* line 876, sass/style.sass */
+/* line 878, sass/style.sass */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-/* line 880, sass/style.sass */
+/* line 882, sass/style.sass */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
 
-/* line 884, sass/style.sass */
+/* line 886, sass/style.sass */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
 
-/* line 888, sass/style.sass */
+/* line 890, sass/style.sass */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 892, sass/style.sass */
+/* line 894, sass/style.sass */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
-/* line 896, sass/style.sass */
+/* line 898, sass/style.sass */
 .gallery-caption {
   display: block;
 }
